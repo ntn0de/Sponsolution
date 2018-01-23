@@ -35,7 +35,7 @@
 
 						<div class="event-row-title">
 							<h2>
-								<a href="event.html">{{ $event->title }}</a>
+								<a href="{{ route('events.show', ['id' => $event->tid]) }}">{{ $event->title }}</a>
 							</h2>
 
 							<p>{{ $event->description }}</p>
