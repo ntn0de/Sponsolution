@@ -167,9 +167,9 @@
 	</div><!-- /.widget -->
 
 	<ul class="timeline">
-		
+		@foreach($sideevents as $sidevent)
 			<li>
-				<h3><a href="event.html">Lorem ipsum</a></h3>
+				<h3><a href="event.html">{{$sidevent->title}}</a></h3>
 
 				<div class="clearfix">
 					<div class="timeline-image">
@@ -184,57 +184,9 @@
 
 				<p>Donec in turpis vitae eros tempus interdum eu quis tellus.</p>
 			</li>
+		@endforeach	
 		
-			<li>
-				<h3><a href="event.html">Lorem ipsum</a></h3>
-
-				<div class="clearfix">
-					<div class="timeline-image">
-						<a href="event.html" style="background-image: url('assets/img/tmp/search-2.jpg');"></a>
-					</div><!-- /.timeline-image -->
-
-					<div class="timeline-attrs">
-						<span>Thamel, Kathmandu</span>
-						<span>Price: <strong>Rs.400</strong></span>
-					</div><!-- /.timeline-attrs -->
-				</div><!-- /.clearfix -->
-
-				<p>ed lacinia rutrum enim facilisis efficitur.</p>
-			</li>
-		
-			<li>
-				<h3><a href="event.html">Lorem ipsum</a></h3>
-
-				<div class="clearfix">
-					<div class="timeline-image">
-						<a href="event.html" style="background-image: url('assets/img/tmp/search-3.jpg');"></a>
-					</div><!-- /.timeline-image -->
-
-					<div class="timeline-attrs">
-						<span>Thamel, Kathmandu</span>
-						<span>Price: <strong>Rs.1800</strong></span>
-					</div><!-- /.timeline-attrs -->
-				</div><!-- /.clearfix -->
-
-				<p>Duis vel aliquet nibh, ac aliquam ante.</p>
-			</li>
-		
-			<li>
-				<h3><a href="event.html">Lorem ipsum</a></h3>
-
-				<div class="clearfix">
-					<div class="timeline-image">
-						<a href="event.html" style="background-image: url('assets/img/tmp/search-4.jpg');"></a>
-					</div><!-- /.timeline-image -->
-
-					<div class="timeline-attrs">
-						<span>Thamel, Kathmandu</span>
-						<span>Price: <strong>Rs.900</strong></span>
-					</div><!-- /.timeline-attrs -->
-				</div><!-- /.clearfix -->
-
-				<p>Duis eget pulvinar est. Interdum et.</p>
-			</li>
+			
 		
 	</ul>
 

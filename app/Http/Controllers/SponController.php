@@ -24,35 +24,41 @@ class SponController extends Controller
      */
     public function index()
     {
-        return view('front.home');
+        $sideevents = $this->event->take(3)->get();
+        return view('front.home',compact('sideevents'));
     }
 
     public function event()
     {
         $events = $this->event->all();
-        return view('front.events', compact('events'));
+        $sideevents = $this->event->take(3)->get();
+        return view('front.events', compact('events','sideevents'));
     }
 
     
     public function spotlight()
     {
         $events = $this->event->where( 'featured','=','1')->get();
-        return view('front.spotlight', compact('events'));
+        $sideevents = $this->event->take(3)->get();
+        return view('front.spotlight', compact('events','sideevents'));
     }
 
     public function about()
     {
-        return view('front.about');
+        $sideevents = $this->event->take(3)->get();
+        return view('front.about',compact('sideevents'));
     }
 
     public function contact()
     {
-        return view('front.contact');
+        $sideevents = $this->event->take(3)->get();
+        return view('front.contact',compact('sideevents'));
     }
 
     public function submitEvent()
     {
-        return view('events.submitevent');
+        $sideevents = $this->event->take(3)->get();
+        return view('events.submitevent',compact('sideevents'));
     }
 
     /**

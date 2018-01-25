@@ -142,8 +142,11 @@
 			</a>
 
 			<div class="card-actions">
-				<a href="#"><i class="fa fa-bookmark"></i> <span>Save</span></a>
-				<a href="#"><i class="fa fa-heart"></i> <span>Like</span></a>
+				@if($event['featured']==1)
+				<a href="#"><i class="fa fa-star" style="color:#2980b9""></i> <span>Featured</span></a>
+				@endif
+				
+				<a href="#"><i class="fa fa-check"  style="color:#2980b9"></i> <span>Verified</span></a>
 			</div><!-- /.card-actions -->
 		</div><!-- /.card-image -->
 
