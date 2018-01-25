@@ -18,8 +18,8 @@
 
 <div class="container-fluid">
 	<ol class="breadcrumb">
-		<li><a href="index.html">EVE</a></li>
-		<li><a href="events.html">Events</a></li>
+		<li><a href="{{route('home')}}">EVE</a></li>
+		<li><a href="{{route('event')}}">Events</a></li>
 		<li class="active">Recent Events</li>
 	</ol>
 </div><!-- /.container-fluid -->
@@ -137,7 +137,7 @@
 							<div class="card">
 	<div class="card-inner">
 		<div class="card-image">
-			<a href="event.html" style="background-image: url('assets/img/tmp/medium-1.jpg');">
+			<a href="{{ route('events.show', ['id' => $event->tid]) }}" style="background-image: url('assets/img/tmp/medium-1.jpg');">
 				<span><i class="fa fa-search"></i></span>
 			</a>
 
@@ -154,7 +154,7 @@
 			</div><!-- /.card-date -->
 
 			<h3 class="card-title">
-				<a href="event.html">{{ $event->title }}</a>
+				<a href="{{ route('events.show', ['id' => $event->tid]) }}">{{ $event->title }}</a>
 			</h3>
 
 			<h4 class="card-subtitle">
