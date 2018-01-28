@@ -8,10 +8,10 @@
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" type="text/css">
-    <link href="assets/libraries/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="assets/libraries/owl-carousel/owl.carousel.min.css" rel="stylesheet" type="text/css">
-    <link href="assets/libraries/owl-carousel/owl.carousel.default.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/eve.css" rel="stylesheet" type="text/css" id="css-primary">
+    <link href="{{url('assets/libraries/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{url('assets/libraries/owl-carousel/owl.carousel.min.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{url('assets/libraries/owl-carousel/owl.carousel.default.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{url('assets/css/eve.css')}}" rel="stylesheet" type="text/css" id="css-primary">
 	<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
 
     <title>Sponsolution Admin Portal</title>

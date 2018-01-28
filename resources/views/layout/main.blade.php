@@ -99,8 +99,18 @@
 					</ul>
 
 					<ul class="nav nav-pills nav-secondary nav-right">
+						@if (Auth::guest())
 						<li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Login</a></li>
 						<li class="nav-item"><a href="{{ route('register') }}" class="nav-link">Register</a></li>
+						@else
+						<li class="nav-item"><a href="{{ route('home') }}" class="nav-link">{{ Auth::user()->name }}</a></li>
+						<li class="nav-item"><a href="{{ route('logout') }}"
+							onclick="event.preventDefault();
+									 document.getElementById('logout-form').submit();" class="nav-link">Logout</a></li>
+						<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                        </form>
+                        @endif
 					</ul>					
 				</div><!-- /.container-fluid -->
 			</div><!-- /.header-bottom -->
