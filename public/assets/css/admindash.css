@@ -129,6 +129,7 @@ h2 {
 #main header .breadcrumb {
   margin-bottom: 0px;
   background: transparent;
+  display: block;
 }
 #main header h1 {
   color: #737E89;

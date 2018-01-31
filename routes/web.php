@@ -25,6 +25,7 @@ Route::get('/home', 'SponController@index');
     Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
     Route::post('/logout', 'Auth\AdminLoginController@logout')->name('admin.logout');
     Route::get('/', 'AdminController@index')->name('admin.dashboard');
+    Route::get('/events', 'AdminController@events')->name('admin.events');
   });
 
 

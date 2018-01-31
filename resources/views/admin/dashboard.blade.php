@@ -17,7 +17,7 @@
       <li><a href="{{ route('logout') }}"
         onclick="event.preventDefault();
                  document.getElementById('logout-form').submit();" class="nav-link">
-                 <i class="fa fa-fw fa-cog"></i><span>logout</span></a></li>
+                 <i class="fa fa-sign-out" aria-hidden="true"></i><span>Logout</span></a></li>
                  <form id="logout-form" action="{{ 'App\Admin' == Auth::getProvider()->getModel() ? route('admin.logout') : route('logout') }}" method="POST" style="display: none;">
                     {{ csrf_field() }}
                 </form>
@@ -25,13 +25,10 @@
   </div>
   <div id="main">
     <header>
-      <ol class="breadcrumb">
-        <li> <a href="#">sponsolution</a></li>
-        <li class="active">dashboard</li>
-      </ol>
+     <h1 class="page-header">You are logged in as <strong>ADMIN</strong></h1> 
     </header>
     <div id="content">
-        <h1 class="page-header">You are logged in as <strong>ADMIN</strong></h1>  
+         
       
         <h1>Properties</h1>
       
@@ -44,27 +41,16 @@
         <div class="col-sm-4">
           <div class="box property-glance">
             <div class="header">
-              <h4 class="pull-left">Hawkins Point</h4><span class="pull-right">Avg. Rent: $790</span>
-              <div class="progress clear-right">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">70% occupied<span class="sr-only">70% Complete</span></div>
-              </div>
-              <div class="clear-left"><i class="fa fa-map-marker"></i><span>Mascoutah, IL</span></div>
+              <h2 >Recent Events</h2>
             </div>
             <div class="body">
-              <div class="row">
-                <div class="col-sm-6 statistic text-center">
-                  <h1>24</h1><small>units</small>
-                </div>
-                <div class="col-sm-6 text-center">
-                  <h1>18</h1><small>filled</small>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-3 col-xs-6 widget" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom"><i class="fa fa-comments-o"></i></div>
-                <div class="col-sm-3 col-xs-6 widget"><i class="fa fa-line-chart"></i></div>
-                <div class="col-sm-3 col-xs-6 widget"><i class="fa fa-money"></i></div>
-                <div class="col-sm-3 col-xs-6 widget"><i class="fa fa-users"></i></div>
-              </div>
+              
+                <li>helloe </li>
+                <li>helloe </li>
+                <li>helloe </li>
+                <li>helloe </li>
+                <li>helloe </li>            
+              
             </div>
           </div>
         </div>
@@ -95,34 +81,6 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-4">
-          <div class="box property-glance">
-            <div class="header">
-              <h4 class="pull-left">Hawkins Point</h4><span class="pull-right">Avg. Rent: $790</span>
-              <div class="progress clear-right">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">70% occupied<span class="sr-only">70% Complete</span></div>
-              </div>
-              <div class="clear-left"><i class="fa fa-map-marker"></i><span>Mascoutah, IL</span></div>
-            </div>
-            <div class="body">
-              <div class="row">
-                <div class="col-sm-6 statistic text-center">
-                  <h1>24</h1><small>units</small>
-                </div>
-                <div class="col-sm-6 text-center">
-                  <h1>18</h1><small>filled</small>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-3 col-xs-6 widget" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom"><i class="fa fa-comments-o"></i></div>
-                <div class="col-sm-3 col-xs-6 widget"><i class="fa fa-line-chart"></i></div>
-                <div class="col-sm-3 col-xs-6 widget"><i class="fa fa-money"></i></div>
-                <div class="col-sm-3 col-xs-6 widget"><i class="fa fa-users"></i></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="row">
         <div class="col-sm-6">
           <h1>Recent Messages</h1>
@@ -166,3 +124,4 @@
   </div>
                    
     <script type="text/javascript" src="{{ url('assets/js/admindash.js')}}"></script>
+    <script src="https://use.fontawesome.com/72c957b24c.js"></script>
