@@ -53,6 +53,14 @@ return [
             'driver' => 'token',
             'provider' => 'admins',
         ],
+        'brand' => [
+            'driver' => 'session',
+            'provider' => 'brands',
+        ],
+        'brand-api' => [
+            'driver' => 'token',
+            'provider' => 'brands',
+        ],
     ],
 
     /*
@@ -80,6 +88,10 @@ return [
         'admins' => [
             'driver' => 'eloquent',
             'model' => App\Admin::class,
+        ],
+        'brands' => [
+            'driver' => 'eloquent',
+            'model' => App\Brand::class,
         ],
 
         // 'users' => [
@@ -111,6 +123,11 @@ return [
         ],
         'admins' => [
             'provider' => 'admins',
+            'table' => 'password_resets',
+            'expire' => 15,
+        ],
+        'brands' => [
+            'provider' => 'brands',
             'table' => 'password_resets',
             'expire' => 15,
         ],

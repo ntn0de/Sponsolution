@@ -100,8 +100,10 @@
 
 					<ul class="nav nav-pills nav-secondary nav-right">
 						@if (Auth::guest())
-						<li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Login</a></li>
-						<li class="nav-item"><a href="{{ route('register') }}" class="nav-link">Register</a></li>
+						<li class="nav-item"><a href="{{ route('brand.login') }}" class="nav-link">Brand Login</a></li>
+						<li class="nav-item"><a href="{{ route('login') }}" class="nav-link">User Login</a></li>
+						<li class="nav-item"><a href="{{ route('brand.register') }}" class="nav-link">Brand Register</a></li>
+						<li class="nav-item"><a href="{{ route('register') }}" class="nav-link">User Register</a></li>
 						@else
 						<li class="nav-item"><a href="{{ route('home') }}" class="nav-link">{{ Auth::user()->name }}</a></li>
 						<li class="nav-item"><a href="{{ route('logout') }}"

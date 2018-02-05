@@ -8,10 +8,10 @@
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" type="text/css">
-    <link href="assets/libraries/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="assets/libraries/owl-carousel/owl.carousel.min.css" rel="stylesheet" type="text/css">
-    <link href="assets/libraries/owl-carousel/owl.carousel.default.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/eve.css" rel="stylesheet" type="text/css" id="css-primary">
+    <link href="{{url('assets/libraries/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{url('assets/libraries/owl-carousel/owl.carousel.min.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{url('assets/libraries/owl-carousel/owl.carousel.default.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{url('assets/css/eve.css" rel="stylesheet" type="text/css')}}" id="css-primary">
 	<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
 
     <title>Sponsolution</title>
@@ -24,7 +24,7 @@
 </a>
 
 <div class="content-center">
-                    <form role="form" method="POST" action="{{ route('register') }}" class="login-form">
+                    <form role="form" method="POST" action="{{ route('brand.store') }}" class="login-form">
                         {{ csrf_field() }}
 
     	<h1>Create Account</h1>
@@ -54,7 +54,20 @@
                                     </span>
                                 @endif
                             
-                        </div>
+        </div>
+        <div class="form-group{{ $errors->has('job_title') ? ' has-error' : '' }}">
+                <label for="job_title" >Job Title</label>
+
+                
+                    <input id="job_title" type="text" class="form-control" name="job_title" value="{{ old('job_title') }}" required autofocus>
+
+                    @if ($errors->has('job_title'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('job_title') }}</strong>
+                        </span>
+                    @endif
+                
+        </div>
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" >Password</label>
