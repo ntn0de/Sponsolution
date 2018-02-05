@@ -25,7 +25,7 @@
   </div>
   <div id="main">
     <header>
-     <h1 class="page-header">You are logged in as <strong>ADMIN</strong></h1> 
+     <h1 class="page-header">You are logged in as <strong>Brand </strong></h1> 
     </header>
     <div id="content">
          

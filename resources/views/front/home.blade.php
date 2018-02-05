@@ -15,8 +15,15 @@
 			<div class="hero-creative-title">
 				<h1>Find the</h1>
 				<h2>Best Event <br>for Your Brand</h2>
-				<a href="#" class="btn btn-secondary btn-lg">Register Your Brand <i class="fa fa-chevron-right"></i></a>
+				@if(Auth::guard('brand')->check()!=1 && Auth::guest())
+				<a href="{{route('brand.register')}}" class="btn btn-secondary btn-lg">Register Your Brand <i class="fa fa-chevron-right"></i></a>
+				@endif	
+				@if(Auth::guard('brand')->check()!=1)
 				<a href="{{route('submitevent')}}" class="btn btn-secondary btn-lg">Submit an Event <i class="fa fa-chevron-right"></i></a>
+				@endif
+				@if(Auth::guard('brand')->check()==1)
+				<a href="{{route('spotlight')}}" class="btn btn-secondary btn-lg">View Top Events <i class="fa fa-chevron-right"></i></a>
+				@endif
 			</div><!-- /.hero-creative-title -->		
 
 			<div class="hero-scroll">

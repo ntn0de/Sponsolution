@@ -99,19 +99,42 @@
 					</ul>
 
 					<ul class="nav nav-pills nav-secondary nav-right">
+							
 						@if (Auth::guest())
-						<li class="nav-item"><a href="{{ route('brand.login') }}" class="nav-link">Brand Login</a></li>
-						<li class="nav-item"><a href="{{ route('login') }}" class="nav-link">User Login</a></li>
-						<li class="nav-item"><a href="{{ route('brand.register') }}" class="nav-link">Brand Register</a></li>
-						<li class="nav-item"><a href="{{ route('register') }}" class="nav-link">User Register</a></li>
+						@if(Auth::guard('brand')->check()!=1)
+						<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download">Login As</a>
+									<div class="dropdown-menu" aria-labelledby="download">
+									  <a class="dropdown-item" href="{{ route('login') }}">Event</a>
+									  <div class="dropdown-divider"></div>
+									  <a class="dropdown-item" href="{{ route('brand.login') }}">Brand</a>
+									</div>
+						</li>
+						<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download">Register As</a>
+								<div class="dropdown-menu" aria-labelledby="download">
+								  <a class="dropdown-item" href="{{ route('register') }}">Event</a>
+								  <div class="dropdown-divider"></div>
+								  <a class="dropdown-item" href="{{ route('brand.register') }}">Brand</a>
+								</div>
+						</li>
 						@else
-						<li class="nav-item"><a href="{{ route('home') }}" class="nav-link">{{ Auth::user()->name }}</a></li>
-						<li class="nav-item"><a href="{{ route('logout') }}"
-							onclick="event.preventDefault();
-									 document.getElementById('logout-form').submit();" class="nav-link">Logout</a></li>
-						<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                        </form>
+						<li class="nav-item"><a href="{{ route('brand.dashboard') }}" class="nav-link">Dashboard</a></li>
+						@endif
+					
+						@else
+						<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download">{{ Auth::user()->name }}</a>
+								<div class="dropdown-menu" aria-labelledby="download">
+								  <a class="dropdown-item" href="{{ route('event') }}">My Events</a>
+								  <a class="dropdown-item" href="{{ route('logout') }}"
+								  onclick="event.preventDefault();
+										   document.getElementById('logout-form').submit();" class="nav-link">Logout</a>
+										   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+												{{ csrf_field() }}
+							</form>
+								</div>
+						</li>
                         @endif
 					</ul>					
 				</div><!-- /.container-fluid -->

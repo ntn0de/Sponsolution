@@ -25,7 +25,7 @@ class BrandController extends Controller
      */
     public function index()
     {
-        return view('brand.dashboard');
+        return view('brands.dashboard');
     } 
     public function showRegisterForm()
     {
@@ -43,10 +43,10 @@ class BrandController extends Controller
         $this->validation($request);
         //Brand::create($request->all());
         return Brand::create([
-            'name' => 'name',
-            'email' => 'email',
-            'job_title' => 'job_title',
-            'password' => bcrypt('password'),
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'job_title' => $request->input('job_title'),
+            'password' => bcrypt($request->input('password')),
         ]);
        // return redirect()->route('brand.login');
     }
