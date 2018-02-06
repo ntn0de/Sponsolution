@@ -10,7 +10,7 @@ class BrandLoginController extends Controller
 {
     public function __construct()
     {
-      $this->middleware('guest', ['except' => ['logout', 'getLogout']]);
+      $this->middleware('guest:brand', ['except' => ['logout']]);
     }
 
     public function showLoginForm()
@@ -42,11 +42,9 @@ class BrandLoginController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function logout(Request $request)
+    public function logout()
     {
         Auth::guard('brand')->logout();
-        $request->session()->flush();
-        $request->session()->regenerate();
         return redirect()->guest(route( 'home' ));
     }
 }

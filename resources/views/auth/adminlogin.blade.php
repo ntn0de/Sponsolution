@@ -1,6 +1,8 @@
 {{-- @extends('layouts.app') --}}
 <html>
-
+    @if(Auth::guard('admin')->check())
+        <h1>hello</h1>
+    @endif
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
