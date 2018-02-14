@@ -126,4 +126,15 @@ class SponController extends Controller
     {
         //
     }
+
+       public function changeStatus() 
+    {
+        $id = Input::get('id');
+
+        $event = Event::findOrFail($id);
+        $event->featured = !$event->featured;
+        $event->save();
+
+        return response()->json($event);
+    }
 }

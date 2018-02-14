@@ -54,7 +54,7 @@ class SubmitEventController extends Controller
      */
     public function show($id)
     {
-        $event = $this->event->where( 'tid' , '=', $id  )->first();
+        $event = $this->event->where( 'id' , '=', $id  )->first();
         $sideevents = $this->event->take(3)->get();
         return view('events.show', compact('event','sideevents'));
     }

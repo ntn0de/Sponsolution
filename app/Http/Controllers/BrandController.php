@@ -69,4 +69,8 @@ class BrandController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+    public function test()
+    {
+        return view('brands.test');
+    } 
 }

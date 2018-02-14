@@ -19,6 +19,7 @@
 Auth::routes();
 
 Route::get('/home', 'SponController@index');
+Route::post('events/changeStatus', array('as' => 'changeStatus', 'uses' => 'SponController@changeStatus')); 
 
   Route::prefix('admin')->group(function() {
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
@@ -33,7 +34,7 @@ Route::get('/home', 'SponController@index');
     Route::post('/login', 'Auth\BrandLoginController@login')->name('brand.login.submit');
     Route::post('/logout', 'Auth\BrandLoginController@logout')->name('brand.logout');
     Route::get('/', 'BrandController@index')->name('brand.dashboard');
-    Route::get('/events', 'BrandController@events')->name('brand.events');
+    Route::get('/test', 'BrandController@test')->name('brand.test');
     Route::get('/register', 'BrandController@showRegisterForm')->name('brand.register');
     Route::post('/register', 'BrandController@store')->name('brand.store');
   });

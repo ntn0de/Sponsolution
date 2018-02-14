@@ -10,10 +10,7 @@
     <ul>
       <li class="head">General</li>
       <li class="active"><a href="#"><i class="fa fa-fw fa-dashboard"></i><span>Dashboard</span></a></li>
-      <li><a href="#"><i class="fa fa-fw fa-inbox"></i><span class="swatch light-grey">Inbox</span></a></li>
-      <li><a href="#"><i class="fa fa-fw fa-user"></i><span>Tenants</span></a></li>
-      <li><a href="#"><i class="fa fa-fw fa-money"></i><span>Payments</span></a></li>
-      <li><a href="#"><i class="fa fa-fw fa-cog"></i><span>Settings</span></a></li>
+      <li><a href="{{ route('brand.test') }}"><i class="fa fa-fw fa-inbox"></i><span class="swatch light-grey">test page</span></a></li>
       <li><a href="{{ route('logout') }}"
         onclick="event.preventDefault();
                  document.getElementById('logout-form').submit();" class="nav-link">
@@ -35,6 +32,26 @@
       <div class="box">
         <div class="body">
           <p>A quick-glance at your performance.</p>
+          <h2>Checkbox</h2>
+  <fieldset>
+    <legend>Hotel Ratings: </legend>
+    <label for="checkbox-1">2 Star</label>
+    <input type="checkbox" name="checkbox-1" id="checkbox-1">
+    <label for="checkbox-2">3 Star</label>
+    <input type="checkbox" name="checkbox-2" id="checkbox-2">
+    <label for="checkbox-3">4 Star</label>
+    <input type="checkbox" name="checkbox-3" id="checkbox-3">
+    <label for="checkbox-4">5 Star</label>
+    <input type="checkbox" name="checkbox-4" id="checkbox-4">
+  </fieldset>
+  <a href="javascript:void(0);">
+    Click here to do nothing
+  </a>
+  
+  <a href="javascript:void(document.body.style.backgroundColor='green');">
+    Click here for green background
+  </a>
+ 
         </div>
       </div>
       <div class="row">

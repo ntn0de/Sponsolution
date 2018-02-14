@@ -26,7 +26,7 @@
 
 						<div class="event-row">
 						<div class="event-row-index">
-							<span>{{$event->tid}}</span>
+							<span>{{$event->id}}</span>
 						</div>
 
 						<div class="event-row-image">
@@ -35,7 +35,7 @@
 
 						<div class="event-row-title">
 							<h2>
-								<a href="{{ route('events.show', ['id' => $event->tid]) }}">{{ $event->title }}</a>
+								<a href="{{ route('events.show', ['id' => $event->id]) }}">{{ $event->title }}</a>
 							</h2>
 
 							<p>{{ $event->description }}</p>

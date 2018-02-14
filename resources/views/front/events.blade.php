@@ -138,7 +138,7 @@
 							<div class="card">
 	<div class="card-inner">
 		<div class="card-image">
-			<a href="{{ route('events.show', ['id' => $event->tid]) }}" style="background-image: url('assets/img/tmp/medium-1.jpg');">
+			<a href="{{ route('events.show', ['id' => $event->id]) }}" style="background-image: url('assets/img/tmp/medium-1.jpg');">
 				<span><i class="fa fa-search"></i></span>
 			</a>
 
@@ -158,7 +158,7 @@
 			</div><!-- /.card-date -->
 
 			<h3 class="card-title">
-				<a href="{{ route('events.show', ['id' => $event->tid]) }}">{{ $event->title }}</a>
+				<a href="{{ route('events.show', ['id' => $event->id]) }}">{{ $event->title }}</a>
 			</h3>
 
 			<h4 class="card-subtitle">
