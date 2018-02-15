@@ -20,7 +20,7 @@ class CreateEventsTable extends Migration
             $table->string('location');
             $table->integer('newsletter');
             $table->integer('terms');
-            $table->integer('featured')->default(0);
+            $table->boolean('featured')->default(false);
             $table->rememberToken();
             $table->timestamps();
         });

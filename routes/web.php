@@ -27,6 +27,8 @@ Route::post('events/changeStatus', array('as' => 'changeStatus', 'uses' => 'Spon
     Route::post('/logout', 'Auth\AdminLoginController@logout')->name('admin.logout');
     Route::get('/', 'AdminController@index')->name('admin.dashboard');
     Route::get('/events', 'AdminController@events')->name('admin.events');
+    Route::get('/brands', 'AdminController@events')->name('admin.brands');
+    Route::get('/users', 'AdminController@events')->name('admin.users');
   });
 
   Route::prefix('brand')->group(function() {

@@ -37,4 +37,10 @@ class AdminController extends Controller
         $brands = $this->brand->all();
         return view('admin.dashboard',compact('events','users','brands'));
     }
+
+    public function events()
+    {
+        $events = $this->event->all();
+        return view('admin.events',compact('events'));
+    }
 }
