@@ -29,7 +29,7 @@
             <li><a href="{{route('admin.events')}}"><i class="fa fa-fw fa-inbox"></i><span class="swatch light-grey">Events</span></a></li>
             <li><a href="{{route('admin.users')}}" class="eventuser"><i class="fa fa-fw fa-user"></i><span>Event Users</span></a></li>
             <li><a href="{{route('admin.brands')}}"><i class="fa fa-fw fa-money"></i><span>Brands</span></a></li>
-            <li><a href="{{route('admin.events')}}"><i class="fa fa-fw fa-cog"></i><span>Settings</span></a></li>
+            <li><a href="#"><i class="fa fa-fw fa-cog"></i><span>Settings</span></a></li>
             <li><a href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();" class="nav-link">

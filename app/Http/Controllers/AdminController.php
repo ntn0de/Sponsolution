@@ -43,4 +43,14 @@ class AdminController extends Controller
         $events = $this->event->all();
         return view('admin.events',compact('events'));
     }
+    public function brands()
+    {
+        $brands = $this->brand->all();
+        return view('admin.brands',compact('brands'));
+    }
+    public function users()
+    {
+        $user = $this->user->all();
+        return view('admin.users',compact('users'));
+    }
 }

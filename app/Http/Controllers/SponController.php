@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Event;
+use Illuminate\Support\Facades\Input;
+use Validator;
+use Response;
+use View;
 
 class SponController extends Controller
 {
