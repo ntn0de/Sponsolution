@@ -1,3 +1,5 @@
+@extends('admin.dash')
+@section('content')
 <div class="dashinfo">
     <table class="table table-striped table-bordered table-hover"  >
                         <thead>
@@ -33,3 +35,4 @@
                         </tbody>
     </table>
 </div>
+@endsection

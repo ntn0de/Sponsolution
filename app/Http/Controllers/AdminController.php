@@ -32,10 +32,11 @@ class AdminController extends Controller
      */
     public function index()
     {
+        $levents = $this->event->orderBy('id', 'desc')->take(3)->get();
+        $lusers = $this->user->orderBy('id', 'desc')->take(3)->get();
+        $lbrands = $this->brand->orderBy('id', 'desc')->take(5)->get();
         $events = $this->event->all();
-        $users = $this->user->all();
-        $brands = $this->brand->all();
-        return view('admin.dashboard',compact('events','users','brands'));
+        return view('admin.dashboard',compact('levents','lusers','lbrands'));
     }
 
     public function events()
@@ -50,7 +51,7 @@ class AdminController extends Controller
     }
     public function users()
     {
-        $user = $this->user->all();
+        $users = $this->user->all();
         return view('admin.users',compact('users'));
     }
 }

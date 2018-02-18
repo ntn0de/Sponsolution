@@ -1,4 +1,6 @@
- <div class="dashinfo">
+@extends('admin.dash')
+@section('content')
+<div class="dashinfo">
     <table class="table table-striped table-bordered table-hover" id="postTable"  >
                         <thead>
                             <tr>
@@ -19,7 +21,7 @@
                                     <td>
                                         {{$event->description}}
                                     </td>
-                                    <td class="text-center"><input type="checkbox" class="featured" id="" data-id="{{$event->id}}" @if ($event->featured) checked @endif></td>
+                                    <td class="text-center"><input type="checkbox" class="featured" name="featured" id="" data-id="{{$event->id}}" @if ($event->featured) checked @endif ></td>
                                     <td>{{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $event->updated_at)->diffForHumans() }}</td>
                                     <td>
                                         <button class="show-modal btn btn-success" data-id="{{$event->id}}" data-title="{{$event->title}}" data-content="{{$event->description}}" >
@@ -34,6 +36,5 @@
                         </tbody>
     </table>
   </div>
-
-
+@endsection
   
