@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
     {{-- icheck checkboxes --}}
-    <link rel="stylesheet" href="{{ asset('icheck/square/yellow.css') }}">
+    <link rel="stylesheet" href="{{ asset('icheck/square/orange.css') }}">
 
     {{-- toastr notifications --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
@@ -63,8 +63,8 @@
             <script>
             $(document).ready(function(){
                 $('.featured').iCheck({
-                    checkboxClass: 'icheckbox_square-yellow',
-                    radioClass: 'iradio_square-yellow',
+                    checkboxClass: 'icheckbox_square-orange',
+                    radioClass: 'iradio_square-orange',
                     increaseArea: '20%'
                 });
                    
