@@ -20,7 +20,9 @@
                                     <td>
                                         {{$user->email}}
                                     </td>
-                                    <td class="text-center"><input type="checkbox" class="featured" id="" data-id="{{$user->id}}" ></td>
+                                    <td class="text-center"><input type="checkbox" class="featured" name="featured" id="" data-id="{{$user->id}}"
+                                        @if ($user->premium) checked
+                                         @endif ></td>
                                     <td>{{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $user->updated_at)->diffForHumans() }}</td>
                                     <td>
                                         <button class="show-modal btn btn-success" data-id="{{$user->id}}" data-title="{{$user->title}}" data-content="{{$user->description}}" >
