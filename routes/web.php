@@ -29,6 +29,11 @@ Route::post('events/changeStatus', array('as' => 'changeStatus', 'uses' => 'Spon
     Route::get('/events', 'AdminController@events')->name('admin.events');
     Route::get('/brands', 'AdminController@brands')->name('admin.brands');
     Route::get('/users', 'AdminController@users')->name('admin.users');
+    // Password reset routes
+    Route::post('/password/email', 'Auth\AdminForgotPasswordController@sendResetLinkEmail')->name('admin.password.email');
+    Route::get('/password/reset', 'Auth\AdminForgotPasswordController@showLinkRequestForm')->name('admin.password.request');
+    Route::post('/password/reset', 'Auth\AdminResetPasswordController@reset');
+    Route::get('/password/reset/{token}', 'Auth\AdminResetPasswordController@showResetForm')->name('admin.password.reset');
   });
 
   Route::prefix('brand')->group(function() {
@@ -39,6 +44,11 @@ Route::post('events/changeStatus', array('as' => 'changeStatus', 'uses' => 'Spon
     Route::get('/test', 'BrandController@test')->name('brand.test');
     Route::get('/register', 'BrandController@showRegisterForm')->name('brand.register');
     Route::post('/register', 'BrandController@store')->name('brand.store');
+    // Password reset routes
+    Route::post('/password/email', 'Auth\BrandForgotPasswordController@sendResetLinkEmail')->name('brand.password.email');
+    Route::get('/password/reset', 'Auth\BrandForgotPasswordController@showLinkRequestForm')->name('brand.password.request');
+    Route::post('/password/reset', 'Auth\BrandResetPasswordController@reset');
+    Route::get('/password/reset/{token}', 'Auth\BrandResetPasswordController@showResetForm')->name('brand.password.reset');
   });
 
 

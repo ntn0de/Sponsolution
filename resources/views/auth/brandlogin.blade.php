@@ -68,7 +68,7 @@
                         </div>
         
                 <button type="submit" class="btn btn-secondary pull-right"> Login</button>
-                <a class="btn btn-link" href="{{ route('password.request') }}">Forgot Your Password? </a>   
+                <a class="btn btn-link" href="{{ route('brand.password.request') }}">Forgot Your Password? </a>   
             
     </form>
 </div><!-- /.content-center -->
